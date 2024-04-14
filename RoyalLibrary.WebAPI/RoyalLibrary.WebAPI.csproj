@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>5e42482b-4d2f-4fe5-bfb5-f75f093450ff</UserSecretsId>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RoyalLibrary.CrossCutting.IoC\RoyalLibrary.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\RoyalLibrary.Domain\RoyalLibrary.Domain.csproj" />
+  </ItemGroup>
+
+
+</Project>
