@@ -10,6 +10,8 @@
         public string LastName { private get; set; }
         public string Type { get; set; }
         public string AvailableCopies => $"{CopiesInUse}/{TotalCopies}";
+        public string Isbn { get; set; }
+        public string Category { get; set; }
         public int TotalCopies { private get; set; }
         public int CopiesInUse { private get; set; }
 
