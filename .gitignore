@@ -361,3 +361,4 @@ FodyWeavers.xsd
 /Template.WebAPI/.config/dotnet-tools.json
 .vscode/launch.json
 .vscode/tasks.json
+/RoyalLibrary.WebAPI/appsettings.json
