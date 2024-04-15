@@ -8,10 +8,10 @@ using Dapper;
 using RoyalLibrary.Domain.Entities.Book;
 using RoyalLibrary.Domain.QueriesResults;
 using RoyalLibrary.Domain.Repositories.Interface;
-using RoyalLibrary.Domain.Repositories.Interface.Book;
+using RoyalLibrary.Domain.Repositories.Interface.Books;
 
 
-namespace RoyalLibrary.Infrastructure.Data.Repositories.Cars
+namespace RoyalLibrary.Infrastructure.Data.Repositories.Books
 {
     public class BookRepository : IBookRepository
     {
@@ -68,6 +68,19 @@ namespace RoyalLibrary.Infrastructure.Data.Repositories.Cars
             }
       
             return  _conn.Query<ListBookQueryResult>(query.ToString() , (object)param);    
+        }
+
+        public int Add(Book model)
+        {
+            var query = new StringBuilder();
+            dynamic param = new ExpandoObject();
+
+            query.AppendLine(@"INSERT INTO books (title, first_name, last_name, total_copies, copies_in_use, type, isbn, category)
+                                VALUES (@title, @firstname, @lastname, @totalcopies, @copiesinuse, @type, @isbn, @category);");
+
+            query.AppendLine(@"SELECT @@IDENTITY");
+
+            return _conn.ExecuteScalar<int>(query.ToString(), model);
         }
     }
 }

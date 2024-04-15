@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RoyalLibrary.Domain.Handlers;
 using RoyalLibrary.Domain.Repositories.Interface;
-using RoyalLibrary.Domain.Repositories.Interface.Book;
+using RoyalLibrary.Domain.Repositories.Interface.Books;
 using RoyalLibrary.Infrastructure.Data.Context;
-using RoyalLibrary.Infrastructure.Data.Repositories.Cars;
+using RoyalLibrary.Infrastructure.Data.Repositories.Books;
 
 
 namespace RoyalLibrary.CrossCutting.IoC
@@ -17,6 +18,7 @@ namespace RoyalLibrary.CrossCutting.IoC
             );
 
             services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<BookHandler>();
 
             services.AddMvc().AddJsonOptions(c => c.JsonSerializerOptions.PropertyNamingPolicy = null);            
 

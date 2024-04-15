@@ -2,6 +2,18 @@
 {
     public class Book
     {
+        public Book(string title, string firstName, string lastName, int totalCopies, int copiesInUse, string type, string isbn, string category)
+        {          
+            Title = title;
+            FirstName = firstName;
+            LastName = lastName;
+            TotalCopies = totalCopies;
+            CopiesInUse = copiesInUse;
+            Type = type;
+            Isbn = isbn;
+            Category = category;
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string FirstName { get; set; }
