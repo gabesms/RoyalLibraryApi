@@ -38,26 +38,19 @@ namespace RoyalLibrary.WebAPI
             services.AddSwaggerGen(c =>
             {
 
-
-                // Ignora as rotas e métodos especificados em IgnoredRoutes
-
-
-
-
                 c.SwaggerDoc("v1",
                     new Microsoft.OpenApi.Models.OpenApiInfo
                     {
                         Title = "Royal Library",
                         Version = "v1"
                     });
-
-                // Configura o Swagger para ler a documentação XML gerada
+             
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
 
-                Bootstrapper.ConfiguraInjecaoDependencia(services, Configuration);
+                Bootstrapper.DependencyInjectionSetup(services, Configuration);
 
                 services.AddControllers();
 

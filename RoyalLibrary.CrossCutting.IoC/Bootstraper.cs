@@ -11,7 +11,7 @@ namespace RoyalLibrary.CrossCutting.IoC
 {
     public static class Bootstrapper
     {
-        public static IServiceCollection ConfiguraInjecaoDependencia(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection DependencyInjectionSetup(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
