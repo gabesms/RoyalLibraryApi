@@ -1,5 +1,5 @@
 ### Royal Library Web API ###
-This repository contains the backend solution for a little book library database system. The solution includes a Web API built with C# using ASP.NET Core. It provides endpoints for searching and managing books based on author, ISBN, or status (own/love/want to read). The focus is on demonstrating the ability to deploy solutions in containers on Azure.
+This repository contains the backend solution for a little book library database system. The solution includes a Web API built with C# using ASP.NET Core. It provides endpoints for searching and managing books based on author, ISBN, or status (own/love/want to read). 
 
 ### Controller: BooksController ###
 The BooksController is responsible for handling requests related to books. It provides endpoints for retrieving a list of books with pagination and adding a new book to the library.
@@ -28,7 +28,8 @@ Returns an ICommandResult object representing the result of the operation.
 
 ### Class: BookRepository ###
 The BookRepository class is responsible for interacting with the database to retrieve and add books.
-Get(BookFilter filter, string orderBy, int top, int skip, bool allRegisters, out int total): Retrieves a list of books based on filter criteria with pagination.
+Get(BookFilter filter, string orderBy, int top, int skip, bool allRegisters, out int total): 
+Retrieves a list of books based on filter criteria with pagination.
 Add(Book model): Adds a new book to the database.
 
 ### Class: Bootstrapper ###
