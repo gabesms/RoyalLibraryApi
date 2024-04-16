@@ -1,12 +1,12 @@
 ### Royal Library Web API ###
-This repository contains the backend solution for a little book library database system. The solution includes a Web API built with C# using ASP.NET Core. It provides endpoints for searching and managing books based on author, title or ISBN 
+This repository contains the backend solution for a little book library database system. The solution includes a Web API built with C# using ASP.NET Core. It provides endpoints for searching and managing books based on author or title;
 
 ### Controller: BooksController ###
 The BooksController is responsible for handling requests related to books. It provides endpoints for retrieving a list of books with pagination and adding a new book to the library.
 
 ### GET /api/books: Returns a list of books filtered with pagination. ###
 Parameters:
-filter: Object containing filter criteria (e.g., author, ISBN).
+filter: Object containing filter criteria.
 sorting: Object containing sorting criteria.
 pagination: Object containing pagination parameters.
 Response:
